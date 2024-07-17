@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_mail import Mail, Message
 
@@ -6,12 +7,12 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 # Use your actual Gmail address
-app.config['MAIL_USERNAME'] = 'samuel.ervin@gmail.com'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
 # Use your generated App Password
-app.config['MAIL_PASSWORD'] = 'pmly bkvc j"pgft vrj'
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['SECRET_KEY'] = '4920ab9ac02c0f2ead0c5a5261944bdb8b540dedc21d372c'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 mail = Mail(app)
 
