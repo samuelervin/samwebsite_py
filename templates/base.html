@@ -20,15 +20,17 @@
      <div class="row">
         <div class="col-10">
             <nav class="navbar navbar-expand-lg bg-primary">
+
                 <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-burger">More</i> 
                     </button>
+                    <a class="navbar-brand link-light float-start" href="#">Sam Ervin - All Around Programming</a>
                     <div class="collapse navbar-collapse light" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active link-light" aria-current="page" href="{{ url_for('home') }}"><i class="fa-solid fa-house"></i> Home</a>
-                            <a class="nav-link link-light" href="{{ url_for('about') }}"><i class="fa-solid fa-mug-saucer"></i> About</a>
-                            <a class="nav-link link-light" href="{{ url_for('contact') }}"><i class="fa-solid fa-envelopes-bulk"></i> Contact</a>
+                            <a class="nav-link active link-light float-end" aria-current="page" href="{{ url_for('home') }}"><i class="fa-solid fa-house"></i> Home</a>
+                            <a class="nav-link link-light float-end" href="{{ url_for('about') }}"><i class="fa-solid fa-mug-saucer"></i> About</a>
+                            <a class="nav-link link-light float-end" href="{{ url_for('contact') }}"><i class="fa-solid fa-envelopes-bulk"></i> Contact</a>
                         
                         </div>
                     </div>
