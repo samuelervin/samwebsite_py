@@ -1,6 +1,84 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
+<h1>{% block title %} About Me{% endblock %}</h1>
+<h3></h3>
+<p>
+  Hello and thank you for your interest in me. I am Samuel (Sam) Ervin. I
+  currently live in Rogers, Arkansas with my wife and three children. I have
+  been a software engineer for many years at a few differrent companies you may
+  have done business with and may have used my software. I have a general
+  interst in many things and I am always looking to learn new things. This is
+  why I like to tinker with many things. Also lots of Home Renovations and DIY
+  tasks around the house because I haven't found a project I can't work my way
+  through. I am working on putting together this site which will house my ideas,
+  and maybe help some others as I muddle through things you may or may not know
+  already. Maybe it can even be a resource to help others learn and grow in
+  their career. I am hoping to even post videos of my learning things or
+  generally working through something. Probably my first being learning how to
+  do the videos in the first place which I will be working on sometime soon.
+</p>
+<p>
+  As far a programming goes, I have been working with .NET for many years with
+  Web Apps, Desktop App, API's, Office Plugins, Sharepoint, Robotics and other
+  Windows related programming. I have been working with Python for a few years
+  now, but since it was never a primary language for me I go in an out of
+  practice with it. I have been working with Flask for a few months now and I am
+  really enjoying it as a web framework. I do like to use Bootstrap for my front
+  end work and I have been working with Bootstrap years now. Professionally
+  overall I have worked in a ton of programming mediums and languages when
+  needed to get the job done. I have been working with FontAwesome for a few
+  years now and I am really enjoying it.
+</p>
+<p>
+  Over my career I have been in a myriad of positions from software engineer,
+  manager, and project manager. I enjoy mentoring and teaching others and I have
+  been a mentor to many over the years. I always have found the best way to
+  learn anything is to teach it to someone else. I have also found that while
+  mentoring and teaching I also learn more from my mentees than I could ever
+  teach them over the course or our engagements. I also have several hobbies
+  that occupy my time otherwise outside of working. I enjoys fishing and
+  spending time out on our local lake here in NWA with my family. I also enjoy
+  wood working projects and making things in the shop that are pretty and
+  functional if possible. I did work for a time as well as a developer with
+  AutoCad APIs and Category Management. This and my interest in robotics and
+  home automation led to looking to learn 3d printing, CNC Routers, and CNC
+  Lazers. Which programming experience and understanding hardware and software
+  logic help a lot when working with these things.
+</p>
 
-{% block content %}
-    <h1>{% block title %} About {% endblock %}</h1>
-    <h3>FlaskApp is a Flask web application written in Python.</h3>
+<h2>Places to find me:</h2>
+
+<div class="row">
+  <div class="col">
+    <h3>
+      <a href="{{ url_for('resume')}}" target="_blank"><i class="fa-solid fa-book"></i> Resume</a
+      >
+    </h3>
+  </div>
+  <div class="col">
+    <h3>
+      <a href="https://github.com/samuelervin?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    </h3>
+  </div>
+  <div class="col">
+    <h3>
+      <a href="https://www.linkedin.com/in/samuelervin/" target="_blank"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    </h3>
+  </div>
+  <div class="col">
+    <h3>
+      <a href="https://x.com/Oakking1225" target="_blank"><i class="fa-brands fa-square-x-twitter"></i> X </a>
+    </h3>
+  </div>
+  <div class="col">
+    <h3>
+      <a href="https://www.youtube.com/@Oakking0i812" target="_blank"> <i class="fa-brands fa-youtube"></i> YouTube</a>
+    </h3>
+  </div>
+  <div class="col">
+    <h3>
+      <a href="https://www.facebook.com/samuel.ervin" target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+    </h3>
+  </div>
+</div>
+
 {% endblock %}

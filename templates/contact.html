@@ -2,9 +2,11 @@
 {% extends 'base.html' %} 
 
 {% block content %}
-<h2> {{ data|safe  }}</h2>
-<h1>{% block title %} Contact {% endblock %}</h1>
-<form method="post">
+
+<h1>{% block title %} Contact Me!{% endblock %}</h1>
+
+{% if data == 'enabled' %}
+<form id="contact" method="post">
 
     <div class="mb-3">
         <label class="form-label" for="email">Subject</label>
@@ -21,6 +23,7 @@
     <div class="mb-3">
 
         <label class="form-label" for="message">Message</label>
+        <br>
         <textarea class="form-textarea" name="message"
                   placeholder="Message here!"
                   rows="15"
@@ -28,12 +31,11 @@
                  >{{ request.form['message'] }}</textarea>
     </div>
 
-   
-
     <br>
-    <button class="btn btn-primary" type="submit">Submit</button>
-
-    
+    <button class="btn btn-primary" type="submit" onclick="toggle_display">Submit</button>
 </form>
+{% else %}
+    <h2> Thank you for your message. I will get back to you as soon as I can on it.</h2>
+{% endif %}
 
 {% endblock %}

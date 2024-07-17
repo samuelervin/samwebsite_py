@@ -7,12 +7,13 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 # Use your actual Gmail address
-app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_USERNAME'] = os.environ.get("MAIL_USERNAME")
 # Use your generated App Password
-app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_PASSWORD'] = os.environ.get("MAIL_PASSWORD")
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+secret_key = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = secret_key
 
 mail = Mail(app)
 
@@ -47,10 +48,13 @@ def contact():
             flash('A message is required!', 'error')
         else:
             flash('Your message has been sent!', 'success')
-            return render_template('contact.html', data='Your message has been sent!')
+            return render_template('contact.html', data='disabled')
 
-    return render_template('contact.html', data='')
+    return render_template('contact.html', data='enabled')
 
+@app.route('/resume/')
+def resume():
+    return render_template('resume.html')   
 
 if __name__ == '__main__':
     app.run(debug=True)
