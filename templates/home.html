@@ -3,39 +3,56 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-<img
-src="{{ url_for('static', filename='sme.png') }}"
-alt="Sam Ervin"
-class="img-fluid float-end self-portrait"
-/>
-<h1>Hi! I am Sam.</h1>
-<p>
-  I am a software engineer, manager, and project manager. I have been
-  responsible for leadership and technical expertise in software engineering
-  with a few different companies using many different systems architectures,
-  hardware platforms, operating systems, frameworks, and programming languages
-  throughout my career journey. I am married to my wife of 22 year, and the father of three kids.
-   I like all things .NET, tech gadgets, robotics,woodworking, sailing, boats and programming languages.
-</p>
 
-<p>
-  I have not blogged on my own regurlary over the years, but I have been around
-  answering posts or generally lurking on the internet. I have decided to start
-  blogging on my own site to share my thoughts and experiences with the world. I
-  hope you enjoy my blog and find it useful. I may even post videos of my
-  learning things or generally working through something. Through this I am
-  hoping to approach mostly things in .NET Programming, but I may also post
-  about other things that I find interesting like this version of my site in
-  python Flask for fun.
-</p>
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+      src="{{ url_for('static', filename='sme.png') }}"
+      alt="Sam Ervin"
+      class="img-fluid rounded-start"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Hi!</h5>
+        <p class="card-text">   I am Sam Ervin a software engineer, manager, and project manager. I have been responsible for leadership and technical expertise in software engineering with a few different companies using many different systems architectures, hardware platforms, operating systems, frameworks, and programming languages throughout my career journey. I am married to my wife of 22 years, and the father of three kids. I like all things .NET, tech gadgets, robotics, woodworking, sailing, boats and programming languages.
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Blog Title 1</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">View </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Blog Title 2</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Blog Title 3</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h2>My Repos on <i class="fa-brands fa-github"></i></h2>
-<p>
-  Here are some of my repos on
-  <a href="https://github.com/samuelervin?tab=repositories" target="_blank">
-    Github.
-  </a>
-  I have more, but these are some of the ones that I have been working on
-  recently.
-</p>
+
+
 {% endblock %}

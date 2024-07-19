@@ -25,3 +25,50 @@ crossorigin="anonymous"
                 </div>
           </nav>
         </div>
+
+
+
+        <div class="row">
+  <div class="col">
+  
+  </div>
+<div class="card col-sm-6">
+  <div class="card-body">
+    <h5 class="card-title">Hi! I am Sam. <i class="fa-brands fa-github"></i></h5>
+    <img
+      src="{{ url_for('static', filename='sme.png') }}"
+      alt="Sam Ervin"
+      class="card-img-top"
+      />
+      <p class="card-text">   I am a software engineer, manager, and project manager. I have been responsible for leadership and technical expertise in software engineering with a few different companies using many different systems architectures, hardware platforms, operating systems, frameworks, and programming languages throughout my career journey. I am married to my wife of 22 years, and the father of three kids. I like all things .NET, tech gadgets, robotics, woodworking, sailing, boats and programming languages.
+    </p>
+    <a class="card-link" href="https://github.com/samuelervin?tab=repositories" target="_blank">
+  </div>
+</div>
+<br>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="width: 18rem;">
+      <h5 class="card-header">Featured</h5>
+      <div class="card-body">
+        <h5 class="card-title">My Repos</h5>
+        <h6 class="card-subtitle mb-2 text-muted"> <i class="fa-brands fa-github"></i></h6>
+        <p class="card-text"> I have more, but these are some of the ones that I have been working on
+          recently. <a class="card-link" href="https://github.com/samuelervin?tab=repositories" target="_blank"> GitHub </a></p>
+        
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
