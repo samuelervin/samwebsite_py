@@ -1,5 +1,13 @@
 
+.title {
+  font-size: calc(1.525rem + 3.3vw);
+}
 
+@media (min-width: 1200px) {
+  .title {
+    font-size: 4rem;
+  }
+}
   .self-portrait {
     width: 75%;
     display: flex;
