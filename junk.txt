@@ -2,3 +2,26 @@
 src="https://kit.fontawesome.com/dbd7461f11.js"
 crossorigin="anonymous"
 ></script>
+
+
+
+     <div class="col-1">
+            <nav class="navbar navbar-expand-md bg-primary">
+
+                <div class="container">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-burger"></i> 
+                    </button>
+                    
+                    <div class="collapse navbar-collapse light" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            
+                            <a class="nav-link active link-light float-end" aria-current="page" href="{{ url_for('home') }}"><i class="fa-solid fa-house"></i> Home</a>
+                            <a class="nav-link link-light float-end" href="{{ url_for('about') }}"><i class="fa-solid fa-mug-saucer"></i> About</a>
+                            <a class="nav-link link-light float-end" href="{{ url_for('contact') }}"><i class="fa-solid fa-envelopes-bulk"></i> Contact</a>
+                        
+                        </div>
+                    </div>
+                </div>
+          </nav>
+        </div>
