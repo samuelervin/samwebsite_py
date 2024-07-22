@@ -1,8 +1,15 @@
 import os
 from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_mail import Mail, Message
+from dotenv import load_dotenv, dotenv_values
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+from sqlalchemy import select
+from models import Item
 
 app = Flask(__name__)
+
+load_dotenv()
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
@@ -14,6 +21,14 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 secret_key = os.environ.get("SECRET_KEY")
 app.config['SECRET_KEY'] = secret_key
+# Get environment variables
+TURSO_DATABASE_URL = os.environ.get("TURSO_DATABASE_URL")
+TURSO_AUTH_TOKEN = os.environ.get("TURSO_AUTH_TOKEN")
+
+# construct special SQLAlchemy URL
+dbUrl = f"sqlite+{TURSO_DATABASE_URL}/?authToken={TURSO_AUTH_TOKEN}&secure=true"
+
+engine = create_engine(dbUrl, connect_args={'check_same_thread': False}, echo=True)
 
 mail = Mail(app)
 
@@ -56,5 +71,22 @@ def contact():
 def resume():
     return render_template('resume.html')   
 
+@app.route("/getdbitems/", methods=(["GET"]))
+def get_db_items():
+    session = Session(engine)
+
+    try:    
+        # get & print items
+        stmt = select(Item)
+
+        for item in session.scalars(stmt):
+            print(item)
+    except Exception as e:
+        print(e)
+        return "An error  with the request occurred", 404
+   
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
