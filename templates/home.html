@@ -4,25 +4,27 @@
 
 {% block content %}
 
-<div class="card mb-3">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-      src="{{ url_for('static', filename='sme.png') }}"
-      alt="Sam Ervin"
-      class="img-fluid rounded-start"
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Hi!</h5>
-        <p class="card-text">   I am Sam Ervin a software engineer, manager, and project manager. I have been responsible for leadership and technical expertise in software engineering with a few different companies using many different systems architectures, hardware platforms, operating systems, frameworks, and programming languages throughout my career journey. I am married to my wife of 22 years, and the father of three kids. I like all things .NET, tech gadgets, robotics, woodworking, sailing, boats and programming languages.
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
+
+<div id="main">
+  <div class="container">
+
+   <aside>
+    <img
+    src="{{ url_for('static', filename='sme.png') }}"
+    alt="Sam Ervin"
+    />
+   </aside>
+
+   <article>
+     <h2>Hello</h2>
+     <p>
+      I am Sam Ervin a software engineer, manager, and project manager. I have been responsible for leadership and technical expertise in software engineering with a few different companies using many different systems architectures, hardware platforms, operating systems, frameworks, and programming languages throughout my career journey. I like all things .NET, tech gadgets, robotics, woodworking, sailing, boats and programming languages.
+     </p>
+   </article>
+ </div><!-- container-->
+</div><!-- #main-->
+
+
 <div class="row">
   <div class="col-sm-4">
     <div class="card">

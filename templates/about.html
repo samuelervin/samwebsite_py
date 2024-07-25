@@ -1,29 +1,37 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 
+{% block content %}
 
-<h1>{% block title %} About Me{% endblock %}</h1>
-<h3></h3>
-<p>Hello and thank you for your interest in me. I am Samuel (Sam) Ervin. I currently live in Rogers, Arkansas with my wife and three children. I have been a software engineer for many years at a few different companies you may have done business with at some time, and may have used my software at some point. I have a general interest in many things tech. I am highly curious as well which makes me always looking to learn new things as well. This is why I like to tinker with many various types of things in my free time. Recently I also do lots of Home Renovations and DIY tasks around the house. Luckily, I haven't found a project, I can't work my way through. </p>
-<p>This leads me to this site. Here I am working on putting together a place which will house my ideas, help manage my projects,
-   and maybe help some others as I muddle through things you may or may not know already. 
-   Maybe it can even be a resource to help others learn and grow in their career. 
-   I am hoping to even post videos of my learning things or generally working through something. 
-   Probably my first being learning how to do the videos in the first place which I will be working on sometime soon. </p>
+  <div class="container">
+   <aside>
+     <img src="{{ url_for('static', filename='sme.png') }}" alt='Picture of Sam'>
+   </aside>
 
-<p>
-  I have not blogged on my own regularly over the years, but I have been around
-  answering posts or generally lurking on the internet. I have decided to start
-  blogging on my own site to share my thoughts and experiences with the world. I
-  hope you enjoy my blog and find it useful. I may even post videos of my
-  learning things or generally working through something. Through this I am
-  hoping to approach mostly things in .NET Programming, but I may also post
-  about other things that I find interesting like this version of my site in
-  python Flask for fun.
-</p>
+   <article>
+     <h2>{% block title %} About Me{% endblock %}</h2>
 
-<p>As far a programming goes, I have been working with .NET for many years with Web Apps, Desktop App, API's, Office Plugins, SharePoint, Robotics and other Windows related programming. I have been working with Python for a few years now, but since it was never a primary language for me, I go in and out of practice with it. I have been working with Flask for a few months now and I am really enjoying it as a web framework. I do like to use Bootstrap for my front-end work and I have been working with Bootstrap years now. Professionally overall I have worked in a ton of programming mediums and languages when needed to get the job done. I have been working with FontAwesome for a few years now and I am really enjoying it.</p>
-<p>Over my career, I have been in a myriad of positions from software engineer, manager, and project manager. I enjoy teaching others and I have also been a mentor to many over the years. I always have found the best way to learn anything is to teach it to someone else. I have also found that while mentoring and teaching I also learn more from my mentees than I could ever teach them over the course or our engagements. I also have several hobbies that occupy my time otherwise outside of working. I enjoy fishing and spending time out on our local lake here in NWA with my family. I also enjoy wood working projects and making things in the shop that are pretty and functional if possible. I did work for a time as well as a developer with AutoCAD APIs and Category Management. This and my interest in robotics and home automation led to looking to learn 3d printing, CNC Routers, and CNC Lasers. Which programming experience and understanding hardware and software logic help a lot when working with these things.</p>
-
+     <p>Thank you for your interest in me. I am Samuel (Sam) Ervin. I currently live in Rogers, Arkansas with my wife and three children. I have been a software engineer for many years at a few different companies you may have done business with at some time, and may have used my software at some point. I have a general interest in many things tech. I am highly curious as well which makes me always looking to learn new things as well. This is why I like to tinker with many various types of things in my free time. Recently I also do lots of Home Renovations and DIY tasks around the house. Luckily, I haven't found a project, I can't work my way through. </p>
+     <p>This leads me to this site. Here I am working on putting together a place which will house my ideas, help manage my projects,
+        and maybe help some others as I muddle through things you may or may not know already. 
+        Maybe it can even be a resource to help others learn and grow in their career. 
+        I am hoping to even post videos of my learning things or generally working through something. 
+        Probably my first being learning how to do the videos in the first place which I will be working on sometime soon. </p>
+     
+     <p>
+       I have not blogged on my own regularly over the years, but I have been around
+       answering posts or generally lurking on the internet. I have decided to start
+       blogging on my own site to share my thoughts and experiences with the world. I
+       hope you enjoy my blog and find it useful. I may even post videos of my
+       learning things or generally working through something. Through this I am
+       hoping to approach mostly things in .NET Programming, but I may also post
+       about other things that I find interesting like this version of my site in
+       python Flask for fun.
+     </p>
+     
+     <p>As far a programming goes, I have been working with .NET for many years with Web Apps, Desktop App, API's, Office Plugins, SharePoint, Robotics and other Windows related programming. I have been working with Python for a few years now, but since it was never a primary language for me, I go in and out of practice with it. I have been working with Flask for a few months now and I am really enjoying it as a web framework. I do like to use Bootstrap for my front-end work and I have been working with Bootstrap years now. Professionally overall I have worked in a ton of programming mediums and languages when needed to get the job done. I have been working with FontAwesome for a few years now and I am really enjoying it.</p>
+     <p>Over my career, I have been in a myriad of positions from software engineer, manager, and project manager. I enjoy teaching others and I have also been a mentor to many over the years. I always have found the best way to learn anything is to teach it to someone else. I have also found that while mentoring and teaching I also learn more from my mentees than I could ever teach them over the course or our engagements. I also have several hobbies that occupy my time otherwise outside of working. I enjoy fishing and spending time out on our local lake here in NWA with my family. I also enjoy wood working projects and making things in the shop that are pretty and functional if possible. I did work for a time as well as a developer with AutoCAD APIs and Category Management. This and my interest in robotics and home automation led to looking to learn 3d printing, CNC Routers, and CNC Lasers. Which programming experience and understanding hardware and software logic help a lot when working with these things.</p>
+   </article>
+ </div><!-- container-->
 
 
 

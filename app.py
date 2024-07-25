@@ -63,13 +63,13 @@ def contact():
             flash('A message is required!', 'error')
         else:
             flash('Your message has been sent!', 'success')
-            return render_template('contact.html', data='disabled')
+            return render_template('contact.html', data='disabled', visibility="hidden" )
 
-    return render_template('contact.html', data='enabled')
+    return render_template('contact.html', data='enabled', visibility="hidden" )
 
 @app.route('/resume/')
 def resume():
-    return render_template('resume.html')   
+    return render_template('resume.html', visibility="hidden")   
 
 @app.route("/getdbitems/", methods=(["GET"]))
 def get_db_items():

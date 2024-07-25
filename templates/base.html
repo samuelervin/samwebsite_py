@@ -4,49 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sam Ervin - {% block title %} {% endblock %}</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='app.css')}}" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='less/style.css')}}" />
    
    
   </head>
+  
+  
   <body>
-    <div class="container fluid">
-      
-      <div class="row">
-    
-      </div>
-      <div class="row">
-        <div class="col bg-primary">
-          <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1 text-white">Sam Ervin-All Around Programming</span>
+    <header>
+  
+          <div class="container">
+              <h2><span class="navbar-brand mb-0">Sam Ervin-All Around Programming</span></h2>
           </div>
-           <button class="navbar-toggler navbar-dark float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+           <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars fa-xs" style="color: #ffffff;"> Menu</i>
             </button>
-            <div class="collapse navbar-collapse navbar-dark navbar-expand-sm" id="navbarNavAltMarkup">
-              <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="collapse navbar-collapse navbar-expand-sm" id="navbarNavAltMarkup">
+              <nav class="navbar navbar-expand-lg">
                 <div class="navbar-nav">
                   <br>
-                    <a class="nav-link link-light" aria-current="page" href="{{ url_for('home') }}"><i class="fa-solid fa-house white"></i> Home</a>
-                    <a class="nav-link link-light" href="{{ url_for('about') }}"><i class="fa-solid fa-mug-saucer"></i> About</a>
-                    <a class="nav-link link-light" href="{{ url_for('contact') }}"><i class="fa-solid fa-envelopes-bulk"></i> Contact</a>
+                    <a class="nav-link" aria-current="page" href="{{ url_for('home') }}"><i class="fa-solid fa-house"></i> Home</a>
+                    <a class="nav-link" href="{{ url_for('about') }}"><i class="fa-solid fa-mug-saucer"></i> About</a>
+                    <a class="nav-link" href="{{ url_for('contact') }}"><i class="fa-solid fa-envelopes-bulk"></i> Contact</a>
                 
                 </div>
-                
+              </nav>
             </div>
-           
-      </div>
-      
-        
-  </nav>
-
-     <div class="row">
+    </header>
+    <div id="main">
+     <div class="row"> <!-- Main info Element -->
              
         <div class="content col">
        
@@ -73,18 +60,40 @@
             {% endblock %}
       </div>
       </div>
-    </div>
-    <br>
-    <br>
+    </div> <!-- Main info Element -->
+</div>
+
+  
+<footer>
+  <div class="container">
+
+   <ul>
+     <li><a href="{{ url_for('resume')}}" target="_blank"><i class="fa-solid fa-book"></i> Resume</a></li>
+     <li>Link</li>
+   </ul>
+
+   <ul>
+     <li>Link</li>
+     <li>Link</li>
+   </ul>
+
+   <ul>
+     <li>Link</li>
+     <li>Link</li>
+   </ul>
+
+ 
+ </div><!-- container-->
+</footer>
+
     <div class="card">
       <div class="card-body">
-        <h2>Other Places to find me:</h2>
+        <h2>Find Me Here:</h2>
 
     <div class="row">
       <div class="col">
         <h3>
-          <a href="{{ url_for('resume')}}" target="_blank"><i class="fa-solid fa-book"></i> Resume</a
-          >
+          
         </h3>
       </div>
       <div class="col">
@@ -115,9 +124,6 @@
     </div>
       </div>
     </div>
-
-    
-
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
