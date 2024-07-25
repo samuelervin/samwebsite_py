@@ -26,9 +26,9 @@ TURSO_DATABASE_URL = os.environ.get("TURSO_DATABASE_URL")
 TURSO_AUTH_TOKEN = os.environ.get("TURSO_AUTH_TOKEN")
 
 # construct special SQLAlchemy URL
-dbUrl = f"sqlite+{TURSO_DATABASE_URL}/?authToken={TURSO_AUTH_TOKEN}&secure=true"
+#dbUrl = f"sqlite+{TURSO_DATABASE_URL}/?authToken={TURSO_AUTH_TOKEN}&secure=true"
 
-engine = create_engine(dbUrl, connect_args={'check_same_thread': False}, echo=True)
+#engine = create_engine(dbUrl, connect_args={'check_same_thread': False}, echo=True)
 
 mail = Mail(app)
 
