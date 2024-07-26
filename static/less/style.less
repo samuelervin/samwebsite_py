@@ -15,28 +15,26 @@
 @radius: 10px;
 
 body {
+    margin: 0;
 	margin: 0;
 	background-color: lighten(@asbestos,30);
-    .gradient(@template-color, lighten(@asbestos,25),@template-color);
+        .gradient(@template-color, lighten(@asbestos,25),@template-color);
 	}
 
 header {
+     
 		background-color: @light;
-	    padding: @padding+30 0 0 @padding+10;
-		color: @template-color;
-	
+	   	color: @template-color;
+     
 				.container {
-						.container-layout;
+                    	.container-layout;
 
 							h1 {
-								font: @fontSize*3 Arial, sans-serif;
-								padding: @padding+10 0;
-								.column(6);
+								font-size: large;							                               
 							}
 
 							nav {
-								.column(6);
-								ul{
+									ul{
 									li {
 										display: inline-block;
 										margin-right: 0 @margin+10;
@@ -60,8 +58,10 @@ header {
 		padding: @padding+10 0 @padding+50 0;
 		color: @dark;
 		.gradient(@template-color, lighten(@asbestos,25),@template-color);
-		.border-radius(@radius);
-
+		//.border-radius(@radius);
+        min-height: 50vh;
+        margin: 0;
+        position: relative;
 		.container {
 			.container-layout;
 				padding-top: 50px;
@@ -90,15 +90,18 @@ header {
 
 	#sub {
 		background-color: lighten(@asbestos,30);
-		padding: @padding+10 0;
+		padding: @padding+10 @padding+10 @padding+10 @padding+10;
 		color: @light;
-		.border-radius(@radius);
+        min-height: 25vh;
+        margin: 10px;
+        position: relative;
+		//.border-radius(@radius);
 		.container {
 			.container-layout;
 			.push(3);
 			.card{
 
-				.column(4);
+				.column(3);
 				.card-header{
 					background-color: @template-color;
 					color: @light;
@@ -116,28 +119,37 @@ header {
 
 	footer 
 	{
-		background-color: lighten(@template-color, 30%);
-		position: absolute;	
+		background-color:@smoky-blue;
+		position: relative;	
 		bottom: 0;	
 		width: @total-width;
-		padding: @padding+10 0;
-		color: @light;
+        padding: @padding 0;
+        margin-top: @padding  @padding  @padding  @padding;
+     	color: @light;
 		.border-radius(@radius);
 		.container {
-			.push(3);
+            padding: @padding  0 @padding 0; 
+		
 			ul {
-				.column(3);
+				.column(2);
 				list-style-type: none;
 				font-size: @fontSize*1.5;
+                padding: @padding+10 0;
 			}
+
             .container-layout;
 		  }
+          h7{
+            font: @fontSize Arial, sans-serif;
+            padding: @padding  0 @padding 0;   
+            .left();
+             }
 		.clearfix()
 	}
 
     #resume {
 
-		padding: @padding+10 0 @padding+50 0;
+		padding: @padding+10 0 @padding+10 @padding+10;
 		color: @light;
 		.gradient(@template-color, lighten(@asbestos,25),@template-color);
 		.border-radius(@radius);
@@ -151,7 +163,7 @@ header {
 
         h7{
             font: @fontSize Arial, sans-serif;
-            padding: @padding+10 0;
-           
+            padding: @padding+10 0;   
         }
+        .clearfix()
     }

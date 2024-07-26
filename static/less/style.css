@@ -40,7 +40,6 @@ body {
 }
 header {
   background-color: #fff;
-  padding: 40px 0 0 20px;
   color: #0815c9;
 }
 header .container {
@@ -49,18 +48,7 @@ header .container {
   *zoom: 1;
 }
 header .container h1 {
-  font: 42px Arial, sans-serif;
-  padding: 20px 0;
-  display: inline;
-  float: left;
-  width: 47.91666667%;
-  margin: 0 1.04166667%;
-}
-header .container nav {
-  display: inline;
-  float: left;
-  width: 47.91666667%;
-  margin: 0 1.04166667%;
+  font-size: large;
 }
 header .container nav ul li {
   display: inline-block;
@@ -88,26 +76,9 @@ header .container:after {
   background: -moz-linear-gradient(center bottom, #a7b0b1 0%, #0815c9 100%);
   background: -o-linear-gradient(#0815c9, #a7b0b1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0815c9', endColorstr='#a7b0b1', GradientType=0);
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  min-height: 50vh;
+  margin: 0;
+  position: relative;
 }
 #main .container {
   width: 80%;
@@ -157,28 +128,11 @@ header .container:after {
 }
 #sub {
   background-color: #b5bcbd;
-  padding: 20px 0;
+  padding: 20px 20px 20px 20px;
   color: #fff;
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  -moz-background-clip: padding-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  -webkit-border-radius: 10px;
-  -o-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+  min-height: 25vh;
+  margin: 10px;
+  position: relative;
 }
 #sub .container {
   width: 80%;
@@ -189,7 +143,7 @@ header .container:after {
 #sub .container .card {
   display: inline;
   float: left;
-  width: 31.25%;
+  width: 22.91666667%;
   margin: 0 1.04166667%;
 }
 #sub .container .card .card-header {
@@ -249,11 +203,12 @@ header .container:after {
   clear: both;
 }
 footer {
-  background-color: #717af9;
-  position: absolute;
+  background-color: #5158b8;
+  position: relative;
   bottom: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
+  margin-top: 10px 10px 10px 10px;
   color: #fff;
   -webkit-border-top-right-radius: 10px;
   -webkit-border-bottom-right-radius: 0;
@@ -278,17 +233,23 @@ footer {
   *zoom: 1;
 }
 footer .container {
-  margin-left: 26.04166667%;
+  padding: 10px 0 10px 0;
   width: 80%;
   margin: auto;
 }
 footer .container ul {
   display: inline;
   float: left;
-  width: 22.91666667%;
+  width: 14.58333333%;
   margin: 0 1.04166667%;
   list-style-type: none;
   font-size: 21px;
+  padding: 20px 0;
+}
+footer h7 {
+  font: 14px Arial, sans-serif;
+  padding: 10px 0 10px 0;
+  float: left;
 }
 footer:before,
 footer:after {
@@ -299,7 +260,7 @@ footer:after {
   clear: both;
 }
 #resume {
-  padding: 20px 0 60px 0;
+  padding: 20px 0 20px 20px;
   color: #fff;
   background: #0815c9;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a7b0b1), color-stop(1, #0815c9));
@@ -327,6 +288,7 @@ footer:after {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
+  *zoom: 1;
 }
 #resume .container {
   width: 80%;
@@ -337,4 +299,12 @@ footer:after {
 #resume h7 {
   font: 14px Arial, sans-serif;
   padding: 20px 0;
+}
+#resume:before,
+#resume:after {
+  content: "";
+  display: table;
+}
+#resume:after {
+  clear: both;
 }
